@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About SeniorLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html">
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><circle cx="16" cy="23" r="11" fill="none" stroke="#0A5C73" stroke-width="5"></circle><circle cx="30" cy="23" r="11" fill="none" stroke="#E0A400" stroke-width="5"></circle></svg>
+        SeniorLink
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="family.html">Family</a>
+        <a href="about.html" aria-current="page">About</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" id="voiceBtn" class="btn" aria-pressed="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+          <span>Voice</span>
+        </button>
+        <button type="button" id="helpBtn" class="btn btn-danger">Need help now</button>
+      </div>
+    </div>
+  </header>
+  <div id="voiceBanner" class="banner banner-voice" hidden>
+    <div class="wrap">
+      <div class="msg"><strong>Listening. Speak when you are ready.</strong><span>Try saying “Find a nurse”, “Call Anna” or “Read my reminders”. This prototype only shows how voice navigation will look.</span></div>
+      <button type="button" id="voiceStop" class="btn">Stop listening</button>
+    </div>
+  </div>
+  <div id="helpBanner" class="banner banner-help" hidden>
+    <div class="wrap">
+      <div class="msg"><strong>Help is on the way.</strong><span>We are telling Anna (daughter), Mang Ben (barangay volunteer) and the Senior Center hotline right now. Stay where you are. This prototype does not send real messages.</span></div>
+      <button type="button" id="helpCancel" class="btn btn-danger" style="background:#fff;color:#b3261e">Cancel, I am okay</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="wrap" style="gap:18px;padding-top:56px;padding-bottom:56px">
+        <p class="eyebrow">About the project</p>
+        <h1 style="max-width:14em">SeniorLink: digital support and services for seniors</h1>
+        <p class="lead" style="max-width:38em">A large-text, simple website that brings trusted services, health reminders, community activities and family check-ins into one place.</p>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:56px">
+      <div class="row" style="gap:24px">
+        <div class="card" style="padding:32px;flex:1 1 440px">
+          <h2 style="font-size:36px">The problem</h2>
+          <ul class="list">
+            <li>Many seniors feel isolated, especially when family lives far away.</li>
+            <li>Services such as nurses, medicine and rides are hard to find and hard to trust.</li>
+            <li>Most websites use small text and confusing menus that seniors find difficult to use.</li>
+          </ul>
+        </div>
+        <div class="card card-solid" style="padding:32px;flex:1 1 440px">
+          <h2 style="font-size:36px">The solution</h2>
+          <p style="font-size:22px;line-height:1.55">A large-text, simple website with four parts: trusted services, health reminders, community activities and a family check-in. Every screen has one clear job, and help is always one tap away.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap stack" style="padding-top:56px">
+      <h2>Sustainable Development Goals</h2>
+      <div class="row">
+        <div class="card"><span class="sdg" style="background:#4c9f38;color:#14262e">3</span><h3>Good Health and Well-being</h3><span class="text">Medicine and check-up reminders, easy access to nurses and health center activities.</span></div>
+        <div class="card"><span class="sdg" style="background:#dd1367;color:#fff">10</span><h3>Reduced Inequalities</h3><span class="text">Bridges the digital gap so seniors are not left out of services that everyone else can reach online.</span></div>
+        <div class="card"><span class="sdg" style="background:#fd9d24;color:#14262e">11</span><h3>Sustainable Cities and Communities</h3><span class="text">Connects barangays, senior centers and volunteers so neighborhoods look after their older residents.</span></div>
+      </div>
+    </section>
+
+    <section class="band" style="margin-top:56px">
+      <div class="wrap section stack" style="gap:28px">
+        <h2>What makes it different</h2>
+        <div class="row">
+          <div class="card" style="padding:26px"><h3 style="font-size:26px">One-click help button</h3><span class="text" style="font-size:20px">Always visible. One press alerts family, a barangay volunteer and the senior center.</span></div>
+          <div class="card" style="padding:26px"><h3 style="font-size:26px">Voice navigation</h3><span class="text" style="font-size:20px">Speak instead of type, for seniors with poor eyesight or shaky hands.</span></div>
+          <div class="card" style="padding:26px"><h3 style="font-size:26px">Verified providers</h3><span class="text" style="font-size:20px">Senior centers and local government offices check each provider before it is listed.</span></div>
+          <div class="card" style="padding:26px"><h3 style="font-size:26px">Family dashboard</h3><span class="text" style="font-size:20px">Families see daily check-ins and reminders, and can send a quick message.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:56px">
+      <div class="row" style="gap:24px">
+        <div class="card" style="padding:32px;flex:1 1 440px">
+          <h2 style="font-size:36px">Feasibility</h2>
+          <ul class="list">
+            <li>A simple interface that needs no training to start.</li>
+            <li>Partnerships with senior centers and local government units.</li>
+            <li>Community volunteers, such as students, help manage listings and visit seniors.</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:32px;flex:1 1 440px">
+          <h2 style="font-size:36px">Business model</h2>
+          <ul class="list">
+            <li><strong>Service provider listings.</strong> Verified providers pay to be listed.</li>
+            <li><strong>Community donations.</strong> Individuals and groups support free features for seniors.</li>
+            <li><strong>Government partnerships.</strong> Local governments fund the platform as a public service.</li>
+          </ul>
+          <p class="text" style="font-size:20px">Seniors and families never pay to use the site.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap stack" style="padding-top:56px;padding-bottom:56px">
+      <h2>Expected impact</h2>
+      <div class="row">
+        <div class="card card-solid"><h3>Less isolation</h3><span class="text">Daily check-ins and local activities keep seniors connected.</span></div>
+        <div class="card card-solid"><h3>Safer access to services</h3><span class="text">Verified providers lower the risk of scams and poor care.</span></div>
+        <div class="card card-solid"><h3>A smaller generation gap</h3><span class="text">Young volunteers teach, and seniors share their stories.</span></div>
+      </div>
+    </section>
+
+    <footer class="footer" style="margin-top:0">
+      <div class="wrap">
+        <p>Try the prototype: press Need help now, turn on Voice, or open the Family dashboard.</p>
+        <a class="btn" href="index.html">Back to home</a>
+      </div>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

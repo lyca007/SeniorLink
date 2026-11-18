@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeniorLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html">
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><circle cx="16" cy="23" r="11" fill="none" stroke="#0A5C73" stroke-width="5"></circle><circle cx="30" cy="23" r="11" fill="none" stroke="#E0A400" stroke-width="5"></circle></svg>
+        SeniorLink
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="family.html">Family</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" id="voiceBtn" class="btn" aria-pressed="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+          <span>Voice</span>
+        </button>
+        <button type="button" id="helpBtn" class="btn btn-danger">Need help now</button>
+      </div>
+    </div>
+  </header>
+  <div id="voiceBanner" class="banner banner-voice" hidden>
+    <div class="wrap">
+      <div class="msg"><strong>Listening. Speak when you are ready.</strong><span>Try saying “Find a nurse”, “Call Anna” or “Read my reminders”. This prototype only shows how voice navigation will look.</span></div>
+      <button type="button" id="voiceStop" class="btn">Stop listening</button>
+    </div>
+  </div>
+  <div id="helpBanner" class="banner banner-help" hidden>
+    <div class="wrap">
+      <div class="msg"><strong>Help is on the way.</strong><span>We are telling Anna (daughter), Mang Ben (barangay volunteer) and the Senior Center hotline right now. Stay where you are. This prototype does not send real messages.</span></div>
+      <button type="button" id="helpCancel" class="btn btn-danger" style="background:#fff;color:#b3261e">Cancel, I am okay</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">Digital support for seniors</p>
+          <h1>Help, health and community, one tap away.</h1>
+          <p class="lead">Find trusted services, keep up with your health reminders, join activities nearby and let your family know you are okay. Large text, simple steps, real people to help.</p>
+          <div class="controls">
+            <a class="btn btn-primary btn-big" href="services.html">Find a trusted service</a>
+            <a class="btn btn-big" href="#today">See my day</a>
+          </div>
+          <div class="controls" role="group" aria-label="Text size">
+            <strong>Text size</strong>
+            <button type="button" class="btn btn-small is-on" data-zoom="1" aria-pressed="true">Normal</button>
+            <button type="button" class="btn btn-small" data-zoom="1.2" aria-pressed="false">Large</button>
+            <button type="button" class="btn btn-small" data-zoom="1.4" aria-pressed="false">Largest</button>
+          </div>
+        </div>
+        <div class="card checkin">
+          <p class="text" style="font-weight:700">Daily check-in</p>
+          <h2>Hello, Lola Remedios</h2>
+          <p class="text" style="font-size:22px">One tap lets Anna and Ramon know you are okay today.</p>
+          <button type="button" id="checkinBtn" class="btn btn-green">I am okay today</button>
+          <div id="checkinDone" class="done-box" hidden>
+            <strong>Sent to Anna and Ramon.</strong>
+            <span style="font-size:22px">Thank you. Have a lovely day.</span>
+            <button type="button" id="checkinUndo" class="btn btn-small btn-done" style="align-self:flex-start">Undo</button>
+          </div>
+          <p class="small">Sample profile for this prototype.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:48px">
+      <div class="row" style="gap:20px">
+        <a class="card card-link" href="services.html">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0A5C73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l15 6v11c0 9-6 16-15 19C15 39 9 32 9 23V12z"></path><path d="M17 24l5 5 9-10"></path></svg>
+          <h3>Find a service</h3><span class="text">Nurses, medicine, rides and meals from verified providers.</span>
+        </a>
+        <a class="card card-link" href="#today">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0A5C73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="15"></circle><path d="M24 17v9l6 4"></path><path d="M8 9l6-3"></path><path d="M40 9l-6-3"></path></svg>
+          <h3>My reminders</h3><span class="text">Medicine, walks and check-ups, one at a time.</span>
+        </a>
+        <a class="card card-link" href="#activities">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0A5C73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="17" r="6"></circle><circle cx="33" cy="19" r="5"></circle><path d="M5 38c0-6 5-10 11-10s11 4 11 10"></path><path d="M30 29c6-1 13 2 13 9"></path></svg>
+          <h3>Activities near me</h3><span class="text">Exercise, health checks and company at the senior center.</span>
+        </a>
+        <a class="card card-link" href="family.html">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0A5C73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 41S7 31 7 19a9 9 0 0 1 17-4 9 9 0 0 1 17 4c0 12-17 22-17 22z"></path></svg>
+          <h3>My family</h3><span class="text">See what your family sees and send a quick message.</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="today" class="wrap section stack">
+      <div class="row" style="align-items:baseline;justify-content:space-between">
+        <h2 style="flex:1 1 400px">Today's health reminders</h2>
+        <span id="doneText" class="teal" style="flex:0 1 auto;font-size:24px;font-weight:700">0 of 3 done</span>
+      </div>
+      <div class="stack" style="gap:16px">
+        <div class="card reminder" data-reminder>
+          <div class="info"><span class="when">8:00 AM</span><span class="title">Take your blood pressure medicine</span><span class="text">One tablet with water, after breakfast.</span></div>
+          <button type="button" class="btn btn-primary" data-toggle data-on="Done. Undo" data-off="Mark as done">Mark as done</button>
+        </div>
+        <div class="card reminder" data-reminder>
+          <div class="info"><span class="when">10:00 AM</span><span class="title">Walk for 15 minutes</span><span class="text">Around the plaza or your garden.</span></div>
+          <button type="button" class="btn btn-primary" data-toggle data-on="Done. Undo" data-off="Mark as done">Mark as done</button>
+        </div>
+        <div class="card reminder" data-reminder>
+          <div class="info"><span class="when">2:00 PM</span><span class="title">Check-up at the barangay health center</span><span class="text">Bring your senior citizen ID. A volunteer can go with you.</span></div>
+          <button type="button" class="btn btn-primary" data-toggle data-on="Done. Undo" data-off="Mark as done">Mark as done</button>
+        </div>
+      </div>
+      <p class="small">Sample reminders for this prototype. Real reminders are set with a family member or a senior center volunteer.</p>
+    </section>
+
+    <section class="band">
+      <div class="wrap section stack" style="gap:28px">
+        <div class="row" style="align-items:flex-end;justify-content:space-between">
+          <div class="stack" style="gap:10px;flex:1 1 420px">
+            <h2>Services you can trust</h2>
+            <p class="lead" style="font-size:22px">Every provider is checked by a senior center or local government office before it appears here.</p>
+          </div>
+          <a class="btn btn-primary" style="flex:0 1 auto" href="services.html">See all services</a>
+        </div>
+        <div class="row">
+          <div class="card"><span class="badge">Verified</span><h3>Kalinga Home Care</h3><span class="text">Licensed nurses visit your home for blood pressure checks and medicine reviews.</span></div>
+          <div class="card"><span class="badge">Verified</span><h3>Botika Malapit</h3><span class="text">Delivers your maintenance medicines and applies your senior citizen discount.</span></div>
+          <div class="card"><span class="badge">Verified</span><h3>Biyahe Kasama</h3><span class="text">Door-to-door rides to the clinic with a trained companion beside you.</span></div>
+        </div>
+        <p class="small">Sample providers for this prototype.</p>
+      </div>
+    </section>
+
+    <section id="activities" class="wrap section stack" style="gap:28px">
+      <div class="stack" style="gap:10px">
+        <h2>Activities near you</h2>
+        <p class="lead" style="font-size:22px">Meet neighbors, stay active and learn something new. Tap Join and a volunteer will save you a seat.</p>
+      </div>
+      <div class="row">
+        <div class="card"><span class="eyebrow" style="letter-spacing:0;text-transform:none">Tuesdays, 7:00 AM</span><h3>Morning exercise</h3><span class="text">Barangay Senior Center</span><button type="button" class="btn btn-primary" data-toggle data-on="You are going. Cancel" data-off="Join">Join</button></div>
+        <div class="card"><span class="eyebrow" style="letter-spacing:0;text-transform:none">Wednesdays, 9:00 AM</span><h3>Free blood pressure check</h3><span class="text">Barangay Health Center</span><button type="button" class="btn btn-primary" data-toggle data-on="You are going. Cancel" data-off="Join">Join</button></div>
+        <div class="card"><span class="eyebrow" style="letter-spacing:0;text-transform:none">Fridays, 3:00 PM</span><h3>Video calls with student volunteers</h3><span class="text">Senior Center, Room 2</span><button type="button" class="btn btn-primary" data-toggle data-on="You are going. Cancel" data-off="Join">Join</button></div>
+        <div class="card"><span class="eyebrow" style="letter-spacing:0;text-transform:none">Saturdays, 4:00 PM</span><h3>Merienda and storytelling</h3><span class="text">Barangay Hall garden</span><button type="button" class="btn btn-primary" data-toggle data-on="You are going. Cancel" data-off="Join">Join</button></div>
+      </div>
+    </section>
+
+    <footer class="footer" style="margin-top:0">
+      <div class="wrap">
+        <p><strong style="font-size:30px;display:block;color:#fff">SeniorLink</strong>Built with senior centers, local government units and community volunteers, so no one has to work out the internet alone.</p>
+        <div class="footer-links"><a class="btn" href="about.html">About the project</a><a class="btn" href="family.html">Family dashboard</a></div>
+      </div>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

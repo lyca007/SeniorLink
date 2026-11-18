@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeniorLink services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html">
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><circle cx="16" cy="23" r="11" fill="none" stroke="#0A5C73" stroke-width="5"></circle><circle cx="30" cy="23" r="11" fill="none" stroke="#E0A400" stroke-width="5"></circle></svg>
+        SeniorLink
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html" aria-current="page">Services</a>
+        <a href="family.html">Family</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" id="voiceBtn" class="btn" aria-pressed="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+          <span>Voice</span>
+        </button>
+        <button type="button" id="helpBtn" class="btn btn-danger">Need help now</button>
+      </div>
+    </div>
+  </header>
+  <div id="voiceBanner" class="banner banner-voice" hidden>
+    <div class="wrap">
+      <div class="msg"><strong>Listening. Speak when you are ready.</strong><span>Try saying “Find a nurse”, “Call Anna” or “Read my reminders”. This prototype only shows how voice navigation will look.</span></div>
+      <button type="button" id="voiceStop" class="btn">Stop listening</button>
+    </div>
+  </div>
+  <div id="helpBanner" class="banner banner-help" hidden>
+    <div class="wrap">
+      <div class="msg"><strong>Help is on the way.</strong><span>We are telling Anna (daughter), Mang Ben (barangay volunteer) and the Senior Center hotline right now. Stay where you are. This prototype does not send real messages.</span></div>
+      <button type="button" id="helpCancel" class="btn btn-danger" style="background:#fff;color:#b3261e">Cancel, I am okay</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="wrap">
+        <h1>Trusted services</h1>
+        <p class="lead">Choose what you need. Every provider below has been checked, and a volunteer will call you before anything is booked.</p>
+      </div>
+    </section>
+
+    <section class="wrap stack" style="padding-top:40px">
+      <div id="filters" class="controls" role="group" aria-label="Service type"></div>
+      <span id="countText" class="teal" style="font-size:22px;font-weight:700"></span>
+      <div class="services-layout">
+        <div id="providerList" class="services-list"></div>
+        <aside class="card services-side" style="gap:18px">
+          <h2 style="font-size:30px">How we verify providers</h2>
+          <ol class="list" style="font-size:21px">
+            <li>The provider meets a senior center or local government office in person.</li>
+            <li>Business permits, licenses and IDs are checked.</li>
+            <li>Seniors rate every visit, and low ratings are reviewed by a volunteer.</li>
+          </ol>
+          <p class="text" style="font-size:20px">Not sure what you need? Press Need help now at the top of the page and a person will call you.</p>
+        </aside>
+      </div>
+      <p class="small">Sample providers and prices for this prototype.</p>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>SeniorLink is built with senior centers, local government units and community volunteers.</p>
+        <a class="btn" href="index.html">Back to home</a>
+      </div>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
